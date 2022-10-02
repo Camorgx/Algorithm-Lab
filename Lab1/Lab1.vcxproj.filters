@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="资源文件\input">
+      <UniqueIdentifier>{09b86c46-bd90-4958-9a12-b1cbf586ddf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\counting_sort">
+      <UniqueIdentifier>{9503b5ac-d4fa-417e-bdf3-3410f5699ebf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\heap_sort">
+      <UniqueIdentifier>{91beac17-2c78-4d36-adcd-6014e989c808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\merge_sort">
+      <UniqueIdentifier>{2e30c1f6-046c-4050-aba9-f66ce974479d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\quick_sort">
+      <UniqueIdentifier>{b8fba09d-3cfc-4554-8a50-0d21ca2b12f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\std_sort">
+      <UniqueIdentifier>{c926b6e7-a7e4-4828-a988-65fd3a1dc8ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lab1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="counting_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="merge_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="heap_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="quick_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input\input.txt">
+      <Filter>资源文件\input</Filter>
+    </Text>
+    <Text Include="counting_sort\result_3.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="counting_sort\result_6.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="counting_sort\result_9.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="counting_sort\result_12.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="counting_sort\result_15.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="counting_sort\result_18.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="counting_sort\time.txt">
+      <Filter>资源文件\counting_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\result_3.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\result_6.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\result_9.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\result_12.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\result_15.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\result_18.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="heap_sort\time.txt">
+      <Filter>资源文件\heap_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\result_3.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\result_6.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\result_9.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\result_12.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\result_15.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\result_18.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="merge_sort\time.txt">
+      <Filter>资源文件\merge_sort</Filter>
+    </Text>
+    <Text Include="std_sort\result_3.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="std_sort\result_6.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="std_sort\result_9.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="std_sort\result_12.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="std_sort\result_15.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="std_sort\result_18.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="std_sort\time.txt">
+      <Filter>资源文件\std_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\result_3.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\result_6.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\result_9.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\result_12.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\result_15.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\result_18.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+    <Text Include="quick_sort\time.txt">
+      <Filter>资源文件\quick_sort</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
