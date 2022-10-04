@@ -84,6 +84,7 @@ int main() {
 			cout << "Origin array: ";
 			display_vector(standard);
 		}
+		fin.close();
 		vector<int> tests[] = { standard, standard, standard, standard };
 		auto start = std::chrono::steady_clock::now();
 		std::sort(standard.begin(), standard.end());
