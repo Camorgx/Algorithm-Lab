@@ -58,7 +58,7 @@ void test_sort(vector<int>& arr, vector<int>& standard, int exp, int method_id) 
 	}
 	cout << "Test passed. Time: " << duration << " ms." << endl;
 	times[method_id].emplace_back(duration);
-	string path = names[method_id] + "/result_" + std::to_string(exp) + ".txt";
+	string path = "output/" + names[method_id] + "/result_" + std::to_string(exp) + ".txt";
 	ofstream fout(path);
 	for (int item : arr)
 		fout << item << endl;
@@ -94,7 +94,7 @@ int main() {
 		double duration = dur.count();
 		cout << "std::sort used " << duration << "ms." << endl;
 		std_time.emplace_back(duration);
-		string path = "std_sort/result_" + std::to_string(exp) + ".txt";
+		string path = "output/std_sort/result_" + std::to_string(exp) + ".txt";
 		ofstream fout(path);
 		for (int item : standard)
 			fout << item << endl;

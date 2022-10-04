@@ -14,22 +14,25 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="资源文件\input">
-      <UniqueIdentifier>{09b86c46-bd90-4958-9a12-b1cbf586ddf2}</UniqueIdentifier>
+      <UniqueIdentifier>{6092e700-82db-48c3-b28d-9d7f2f40a275}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\counting_sort">
-      <UniqueIdentifier>{9503b5ac-d4fa-417e-bdf3-3410f5699ebf}</UniqueIdentifier>
+    <Filter Include="资源文件\output">
+      <UniqueIdentifier>{d66adda8-2527-4f96-b654-95d7164ab380}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\heap_sort">
-      <UniqueIdentifier>{91beac17-2c78-4d36-adcd-6014e989c808}</UniqueIdentifier>
+    <Filter Include="资源文件\output\std_sort">
+      <UniqueIdentifier>{385166c6-c9a8-4307-b717-8cdd3e43a3cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\merge_sort">
-      <UniqueIdentifier>{2e30c1f6-046c-4050-aba9-f66ce974479d}</UniqueIdentifier>
+    <Filter Include="资源文件\output\heap_sort">
+      <UniqueIdentifier>{b6c64ba4-a2ac-471f-b9ee-382710dcfa8f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\quick_sort">
-      <UniqueIdentifier>{b8fba09d-3cfc-4554-8a50-0d21ca2b12f0}</UniqueIdentifier>
+    <Filter Include="资源文件\output\quick_sort">
+      <UniqueIdentifier>{128b3a28-4f97-47b7-b2f6-09223bedd0cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\std_sort">
-      <UniqueIdentifier>{c926b6e7-a7e4-4828-a988-65fd3a1dc8ed}</UniqueIdentifier>
+    <Filter Include="资源文件\output\merge_sort">
+      <UniqueIdentifier>{38539a5c-0182-468a-ba31-75fa867f38d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\output\counting_sort">
+      <UniqueIdentifier>{cf0a4676-0671-4854-bac1-b48479af3ed2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -55,113 +58,113 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="output\heap_sort\result_3.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
+    <Text Include="output\heap_sort\result_6.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
+    <Text Include="output\heap_sort\result_9.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
+    <Text Include="output\heap_sort\result_12.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
+    <Text Include="output\heap_sort\result_15.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
+    <Text Include="output\heap_sort\result_18.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
+    <Text Include="output\heap_sort\time.txt">
+      <Filter>资源文件\output\heap_sort</Filter>
+    </Text>
     <Text Include="input\input.txt">
       <Filter>资源文件\input</Filter>
     </Text>
-    <Text Include="counting_sort\result_3.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\result_3.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="counting_sort\result_6.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\result_6.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="counting_sort\result_9.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\result_9.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="counting_sort\result_12.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\result_12.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="counting_sort\result_15.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\result_15.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="counting_sort\result_18.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\result_18.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="counting_sort\time.txt">
-      <Filter>资源文件\counting_sort</Filter>
+    <Text Include="output\merge_sort\time.txt">
+      <Filter>资源文件\output\merge_sort</Filter>
     </Text>
-    <Text Include="heap_sort\result_3.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\result_3.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="heap_sort\result_6.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\result_6.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="heap_sort\result_9.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\result_9.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="heap_sort\result_12.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\result_12.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="heap_sort\result_15.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\result_15.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="heap_sort\result_18.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\result_18.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="heap_sort\time.txt">
-      <Filter>资源文件\heap_sort</Filter>
+    <Text Include="output\counting_sort\time.txt">
+      <Filter>资源文件\output\counting_sort</Filter>
     </Text>
-    <Text Include="merge_sort\result_3.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\result_3.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="merge_sort\result_6.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\result_6.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="merge_sort\result_9.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\result_9.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="merge_sort\result_12.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\result_12.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="merge_sort\result_15.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\result_15.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="merge_sort\result_18.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\result_18.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="merge_sort\time.txt">
-      <Filter>资源文件\merge_sort</Filter>
+    <Text Include="output\quick_sort\time.txt">
+      <Filter>资源文件\output\quick_sort</Filter>
     </Text>
-    <Text Include="std_sort\result_3.txt">
-      <Filter>资源文件\std_sort</Filter>
+    <Text Include="output\std_sort\result_3.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
-    <Text Include="std_sort\result_6.txt">
-      <Filter>资源文件\std_sort</Filter>
+    <Text Include="output\std_sort\result_6.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
-    <Text Include="std_sort\result_9.txt">
-      <Filter>资源文件\std_sort</Filter>
+    <Text Include="output\std_sort\result_9.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
-    <Text Include="std_sort\result_12.txt">
-      <Filter>资源文件\std_sort</Filter>
+    <Text Include="output\std_sort\result_12.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
-    <Text Include="std_sort\result_15.txt">
-      <Filter>资源文件\std_sort</Filter>
+    <Text Include="output\std_sort\result_15.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
-    <Text Include="std_sort\result_18.txt">
-      <Filter>资源文件\std_sort</Filter>
+    <Text Include="output\std_sort\result_18.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
-    <Text Include="std_sort\time.txt">
-      <Filter>资源文件\std_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\result_3.txt">
-      <Filter>资源文件\quick_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\result_6.txt">
-      <Filter>资源文件\quick_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\result_9.txt">
-      <Filter>资源文件\quick_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\result_12.txt">
-      <Filter>资源文件\quick_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\result_15.txt">
-      <Filter>资源文件\quick_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\result_18.txt">
-      <Filter>资源文件\quick_sort</Filter>
-    </Text>
-    <Text Include="quick_sort\time.txt">
-      <Filter>资源文件\quick_sort</Filter>
+    <Text Include="output\std_sort\time.txt">
+      <Filter>资源文件\output\std_sort</Filter>
     </Text>
   </ItemGroup>
 </Project>
