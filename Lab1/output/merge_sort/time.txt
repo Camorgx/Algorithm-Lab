@@ -1,6 +1,0 @@
-duration = 0.0033 ms
-duration = 0.0198 ms
-duration = 0.1394 ms
-duration = 1.1549 ms
-duration = 9.3984 ms
-duration = 85.0622 ms

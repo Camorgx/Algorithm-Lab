@@ -61,5 +61,29 @@
     <Text Include="ex2\input\2_2_input.txt">
       <Filter>资源文件\ext2\input</Filter>
     </Text>
+    <Text Include="ex1\output\result.txt">
+      <Filter>资源文件\ex1\output</Filter>
+    </Text>
+    <Text Include="ex1\output\time.txt">
+      <Filter>资源文件\ex1\output</Filter>
+    </Text>
+    <Text Include="ex2\output\result_1.txt">
+      <Filter>资源文件\ext2\output</Filter>
+    </Text>
+    <Text Include="ex2\output\result_2.txt">
+      <Filter>资源文件\ext2\output</Filter>
+    </Text>
+    <Text Include="ex2\output\result_3.txt">
+      <Filter>资源文件\ext2\output</Filter>
+    </Text>
+    <Text Include="ex2\output\result_4.txt">
+      <Filter>资源文件\ext2\output</Filter>
+    </Text>
+    <Text Include="ex2\output\result_5.txt">
+      <Filter>资源文件\ext2\output</Filter>
+    </Text>
+    <Text Include="ex2\output\time.txt">
+      <Filter>资源文件\ext2\output</Filter>
+    </Text>
   </ItemGroup>
 </Project>

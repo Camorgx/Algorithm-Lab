@@ -144,7 +144,15 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ex1\input\2_1_input.txt" />
+    <Text Include="ex1\output\result.txt" />
+    <Text Include="ex1\output\time.txt" />
     <Text Include="ex2\input\2_2_input.txt" />
+    <Text Include="ex2\output\result_1.txt" />
+    <Text Include="ex2\output\result_2.txt" />
+    <Text Include="ex2\output\result_3.txt" />
+    <Text Include="ex2\output\result_4.txt" />
+    <Text Include="ex2\output\result_5.txt" />
+    <Text Include="ex2\output\time.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
