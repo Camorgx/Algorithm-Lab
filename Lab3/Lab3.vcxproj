@@ -141,6 +141,12 @@
     <ClInclude Include="int_tree.hpp" />
     <ClInclude Include="rb_tree.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="ex1\input\input.txt" />
+    <Text Include="ex1\output\delete_data.txt" />
+    <Text Include="ex1\output\inorder.txt" />
+    <Text Include="ex1\output\search.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

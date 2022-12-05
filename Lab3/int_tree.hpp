@@ -11,6 +11,9 @@ public:
 
 		bool overlap(const interval& ano) const;
 		std::string to_string() const;
+
+		interval() = default;
+		interval(int l, int r) : low(l), high(r) { }
 	};
 	// 区间树节点，派生自红黑树节点
 	class node : public rb_tree::node {

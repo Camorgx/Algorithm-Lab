@@ -34,7 +34,9 @@ public:
 	void remove(node* z);
 	node* search(int key) const;
 	// Êä³öÖÐÐò±éÀú
-	std::string to_string(const std::string& join) const;
+	std::string to_string(const std::string& join = " ") const;
+	std::string to_string(const rb_tree::node* rt,
+		const std::string& join = " ") const;
 
 	rb_tree();
 	virtual ~rb_tree();
@@ -43,4 +45,5 @@ private:
 	void transplant(node* u, node* v);
 	void remove_fixup(node* x);
 	void insert_fixup(node* z);
+	void destruct_tree(node* root);
 };

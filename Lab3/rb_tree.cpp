@@ -10,15 +10,30 @@ rb_tree::rb_tree() {
 }
 
 rb_tree::~rb_tree() {
+	destruct_tree(root);
+	delete nil;
+}
 
+void rb_tree::destruct_tree(rb_tree::node* root) {
+	if (root == nil) return;
+	destruct_tree(root->left);
+	destruct_tree(root->right);
+	delete root;
 }
 
 std::string rb_tree::node::to_string() const {
 	return std::format("{0}", key);
 }
 
-std::string rb_tree::to_string(const std::string& join) const {
+std::string rb_tree::to_string(const rb_tree::node* rt, 
+	const std::string& join) const {
+	if (rt == nil) return "";
+	return std::format("{0}{1}{2}{3}", to_string(rt->left, join), 
+		rt->to_string(), join, to_string(rt->right, join));
+}
 
+std::string rb_tree::to_string(const std::string& join) const {
+	return to_string(root, join);
 }
 
 void rb_tree::node::left_rotate(rb_tree* tree) {

@@ -11,11 +11,11 @@ int_tree::int_tree() {
 }
 
 std::string int_tree::interval::to_string() const {
-	return std::format("[{0}, {1}]", low, high);
+	return std::format("{0} {1}", low, high);
 }
 
 std::string int_tree::node::to_string() const {
-	return std::format("int = {0}, max = {1}", intl.to_string(), max);
+	return std::format("{0} {1}", intl.to_string(), max);
 }
 
 bool int_tree::interval::overlap(const int_tree::interval& ano) const {

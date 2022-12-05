@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="资源文件\input">
+      <UniqueIdentifier>{981a2fa9-b24c-40ae-a901-891e9f64fbf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\output">
+      <UniqueIdentifier>{79997be0-3cc1-4723-bedb-1f61c158b261}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab3.cpp">
@@ -32,5 +38,19 @@
     <ClInclude Include="int_tree.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ex1\input\input.txt">
+      <Filter>资源文件\input</Filter>
+    </Text>
+    <Text Include="ex1\output\delete_data.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="ex1\output\inorder.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="ex1\output\search.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
   </ItemGroup>
 </Project>
