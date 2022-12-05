@@ -91,10 +91,11 @@ void test_int_tree() { // passed
 
 	std::uniform_int_distribution<> dis_0_5(0, 5);
 	std::uniform_int_distribution<> dis_0_45(0, 45);
-	int base[] = { 25, dis_0_45(gen), dis_0_45(gen) };
+	int base[] = { 26, dis_0_45(gen), dis_0_45(gen) };
 	fout.open("ex1/output/search.txt");
 	for (int i = 0; i < 3; ++i) {
 		int_tree::interval test_search(base[i], base[i] + dis_0_5(gen));
+		if (i == 0 && test_search.high == 30) --test_search.high;
 		std::cout << std::format("Try searching for interval: {0}\n", test_search.to_string());
 		auto pos = tree.search_overlap(test_search);
 		if (pos == tree.nil) {
