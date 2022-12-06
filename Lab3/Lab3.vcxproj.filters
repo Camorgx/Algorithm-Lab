@@ -30,12 +30,18 @@
     <ClCompile Include="int_tree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="rb_tree.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="int_tree.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

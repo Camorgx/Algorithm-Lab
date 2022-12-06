@@ -31,7 +31,7 @@ public:
 	node* root;
 
 	void insert(node* z);
-	void remove(node* z);
+	virtual void remove(node* z);
 	node* search(int key) const;
 	// Êä³öÖÐÐò±éÀú
 	std::string to_string(const std::string& join = " ") const;
@@ -40,7 +40,7 @@ public:
 
 	rb_tree();
 	virtual ~rb_tree();
-private:
+protected:
 	node* minimum(node* root);
 	void transplant(node* u, node* v);
 	void remove_fixup(node* x);

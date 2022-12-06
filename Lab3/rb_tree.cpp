@@ -173,6 +173,7 @@ void rb_tree::remove(node* z) {
 	}
 	if (y_origin_color == node::color::black)
 		remove_fixup(x);
+	delete z;
 }
 
 void rb_tree::remove_fixup(rb_tree::node* x) {

@@ -136,10 +136,12 @@
     <ClCompile Include="int_tree.cpp" />
     <ClCompile Include="Lab3.cpp" />
     <ClCompile Include="rb_tree.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="int_tree.hpp" />
     <ClInclude Include="rb_tree.hpp" />
+    <ClInclude Include="test.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ex1\input\input.txt" />

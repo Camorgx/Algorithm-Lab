@@ -33,7 +33,10 @@ public:
 	node* search_overlap(const interval& intl) const;
 	node* search_exact(const interval& intl) const;
 	void insert(const interval& intl);
+	void remove(rb_tree::node* z) override;
 
 	int_tree();
 	~int_tree() = default;
+private:
+	void max_fix_up(int_tree::node* p);
 };
