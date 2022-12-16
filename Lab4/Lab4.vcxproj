@@ -136,11 +136,13 @@
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="Johnson.cpp" />
     <ClCompile Include="Lab4.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fib_heap.hpp" />
     <ClInclude Include="graph.hpp" />
     <ClInclude Include="Johnson.hpp" />
+    <ClInclude Include="test.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

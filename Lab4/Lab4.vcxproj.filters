@@ -24,6 +24,9 @@
     <ClCompile Include="Johnson.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fib_heap.hpp">
@@ -33,6 +36,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Johnson.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
