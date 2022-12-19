@@ -16,19 +16,19 @@
     <Filter Include="资源文件\ex1">
       <UniqueIdentifier>{7906b84f-465c-4752-bd12-bec743741839}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\ext2">
-      <UniqueIdentifier>{52b58141-7805-4f93-8063-f07b7ad946fd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="资源文件\ex1\input">
       <UniqueIdentifier>{498352e9-5d32-4bd2-ab0d-cf658cfbead5}</UniqueIdentifier>
     </Filter>
     <Filter Include="资源文件\ex1\output">
       <UniqueIdentifier>{836c4824-02ed-44ba-b493-7646fe0aeb2a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\ext2\input">
+    <Filter Include="资源文件\ex2">
+      <UniqueIdentifier>{52b58141-7805-4f93-8063-f07b7ad946fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\ex2\input">
       <UniqueIdentifier>{eb80c383-6157-46ba-8383-948827ab381c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\ext2\output">
+    <Filter Include="资源文件\ex2\output">
       <UniqueIdentifier>{ac0daf8c-f75a-4992-b057-c6c81ec66016}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -59,7 +59,7 @@
       <Filter>资源文件\ex1\input</Filter>
     </Text>
     <Text Include="ex2\input\2_2_input.txt">
-      <Filter>资源文件\ext2\input</Filter>
+      <Filter>资源文件\ex2\input</Filter>
     </Text>
     <Text Include="ex1\output\result.txt">
       <Filter>资源文件\ex1\output</Filter>
@@ -68,22 +68,22 @@
       <Filter>资源文件\ex1\output</Filter>
     </Text>
     <Text Include="ex2\output\result_1.txt">
-      <Filter>资源文件\ext2\output</Filter>
+      <Filter>资源文件\ex2\output</Filter>
     </Text>
     <Text Include="ex2\output\result_2.txt">
-      <Filter>资源文件\ext2\output</Filter>
+      <Filter>资源文件\ex2\output</Filter>
     </Text>
     <Text Include="ex2\output\result_3.txt">
-      <Filter>资源文件\ext2\output</Filter>
+      <Filter>资源文件\ex2\output</Filter>
     </Text>
     <Text Include="ex2\output\result_4.txt">
-      <Filter>资源文件\ext2\output</Filter>
+      <Filter>资源文件\ex2\output</Filter>
     </Text>
     <Text Include="ex2\output\result_5.txt">
-      <Filter>资源文件\ext2\output</Filter>
+      <Filter>资源文件\ex2\output</Filter>
     </Text>
     <Text Include="ex2\output\time.txt">
-      <Filter>资源文件\ext2\output</Filter>
+      <Filter>资源文件\ex2\output</Filter>
     </Text>
   </ItemGroup>
 </Project>

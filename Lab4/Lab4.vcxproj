@@ -144,6 +144,16 @@
     <ClInclude Include="Johnson.hpp" />
     <ClInclude Include="test.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="input\input11.txt" />
+    <Text Include="input\input12.txt" />
+    <Text Include="input\input21.txt" />
+    <Text Include="input\input22.txt" />
+    <Text Include="input\input31.txt" />
+    <Text Include="input\input32.txt" />
+    <Text Include="input\input41.txt" />
+    <Text Include="input\input42.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
