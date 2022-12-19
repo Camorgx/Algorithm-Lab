@@ -42,7 +42,8 @@ void generate_random_input() {
 	}
 }
 
+#include "test.hpp"
 int main() {
-	generate_random_input();
+	test_fib_heap();
 	return 0;
 }

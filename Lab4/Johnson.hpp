@@ -1,5 +1,6 @@
 #pragma once
 
+#include "fib_heap.hpp" 
 #include "graph.hpp"
 
 #include <tuple>
@@ -12,3 +13,20 @@ extern void bellman_ford(graph& g, int s);
 extern std::tuple<unsigned, graph::edge*> detect_negative_circle(const graph& g);
 
 extern void break_negative_circle(graph& g);
+
+struct ver_pair {
+	int v_d = 0;
+	int vertex = 0;
+	auto operator<=>(const ver_pair& ano) const {
+		return v_d <=> ano.v_d;
+	}
+	bool operator==(const ver_pair& ano) const {
+		return v_d == ano.v_d;
+	}
+};
+
+extern void Dijkstra(graph& g, int s, std::vector<fib_heap<ver_pair>::node*>& nodes);
+
+// allocate space for array that matches vertexes and fib_heap nodes
+// must be called before all the Dijkstras
+extern void prepare_for_dij(const graph& g, std::vector<fib_heap<ver_pair>::node*>& nodes);

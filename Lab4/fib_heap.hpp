@@ -14,6 +14,7 @@ concept fib_heap_val = requires (val_type val1, val_type val2) {
 // Use as priority queue
 template <fib_heap_val val_type>
 class fib_heap {
+public:
 	struct node {
 		val_type val;
 		size_t degree = 0;
@@ -23,13 +24,25 @@ class fib_heap {
 		node* left = nullptr;
 		node* right = nullptr;
 	};
-public:
+
 	node* get_min() const { return min; }
 
 	size_t count() const { return size; }
 
 	void insert(const val_type& val) {
 		insert(new node { val });
+	}
+
+	void insert(node* x) {
+		x->parent = x->child = nullptr;
+		x->mark = false;
+		x->degree = 0;
+		if (!min) min = create_circular_list(x);
+		else {
+			insert_circular_list(min, x);
+			if (x->val < min->val) min = x;
+		}
+		++size;
 	}
 
 	// need to delete after calling
@@ -158,15 +171,6 @@ private:
 		++x->degree;
 		y->mark = false;
 		y->parent = x;
-	}
-
-	void insert(node* x) {
-		if (!min) min = create_circular_list(x);
-		else {
-			insert_circular_list(min, x);
-			if (x->val < min->val) min = x;
-		}
-		++size;
 	}
 
 	void cut(node* x, node* y) {
