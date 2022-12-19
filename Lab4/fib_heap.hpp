@@ -10,7 +10,7 @@ concept fib_heap_val = requires (val_type val1, val_type val2) {
 	{ val1 > val2 } -> std::same_as<bool>;
 };
 
-// Only implement insert and extract_min
+// Only implement insert, extract_min and decrease_key
 // Use as priority queue
 template <fib_heap_val val_type>
 class fib_heap {
@@ -32,6 +32,7 @@ public:
 		insert(new node { val });
 	}
 
+	// need to delete after calling
 	node* extract_min() {
 		node* z = min;
 		if (z) {
@@ -53,6 +54,18 @@ public:
 			--size;
 		}
 		return z;
+	}
+
+	bool decrease_key(node* x, const val_type& val) {
+		if (val > x->val) return false;
+		x->val = val;
+		node* y = x->parent;
+		if (y && x->val < y->val) {
+			cut(x, y);
+			cascading_cut(y);
+		}
+		if (x->val < min->val) min = x;
+		return true;
 	}
 
 	~fib_heap() {
@@ -138,6 +151,7 @@ private:
 	}
 
 	void link(node* y, node* x) {
+		if (x == y) return;
 		remove_circular_list(min, y);
 		if (!x->child) x->child = create_circular_list(y);
 		else insert_circular_list(x->child, y);
@@ -153,5 +167,24 @@ private:
 			if (x->val < min->val) min = x;
 		}
 		++size;
+	}
+
+	void cut(node* x, node* y) {
+		remove_circular_list(y->child, x);
+		--y->degree;
+		insert_circular_list(min, x);
+		x->parent = nullptr;
+		x->mark = false;
+	}
+
+	void cascading_cut(node* y) {
+		node* z = y->parent;
+		if (z) {
+			if (!y->mark) y->mark = true;
+			else {
+				cut(y, z);
+				cascading_cut(z);
+			}
+		}
 	}
 };
