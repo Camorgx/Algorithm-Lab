@@ -1,6 +1,7 @@
 #include "utils.hpp"
 
 #include <cmath>
+#include <chrono>
 #include <format>
 #include <fstream>
 #include <iostream>
@@ -66,6 +67,68 @@ void display_output(std::ostream& file, const ans_matrix& d, const ans_matrix& p
 				o_str += std::format("{} {})\n", path[0], d[u][v]);
 				file << o_str;
 			}
+		}
+	}
+}
+
+void run_experiment() {
+	constexpr int test_N[] = { 27, 81, 243, 729 };
+	std::ofstream exc_time("output/time.txt");
+	for (int test_id = 0; test_id < 4; ++test_id) {
+		int ver_cnt = test_N[test_id];
+		// log_e 5, log_e 7
+		constexpr double logs[] = { 1.6094379124341, 1.9459101490553 };
+		for (int edge_id = 0; edge_id < 2; ++edge_id) {
+			std::string input_file = std::format("input/input{}{}.txt",
+				test_id + 1, edge_id + 1);
+			std::string output_file = std::format("output/result{}{}.txt",
+				test_id + 1, edge_id + 1);
+			std::ifstream input(input_file);
+			std::ofstream output(output_file);
+			int edge_cnt = static_cast<int>(std::log(ver_cnt) / logs[edge_id]) * ver_cnt;
+			std::cout << std::format("Reading data from {}.\n", input_file);
+			graph g(ver_cnt);
+			for (int i = 0; i < edge_cnt; ++i) {
+				unsigned from, to;
+				int weight;
+				input >> from >> to >> weight;
+				g.add_edge(from, to, weight);
+			}
+			std::cout << std::format("Total vertex count: {}\nTotal edge count: {}\n",
+				ver_cnt, edge_cnt);
+			input.close();
+			// input data finished
+			
+			break_negative_circle(g);
+			if (g.edge_cnt != edge_cnt) {
+				std::cout << "Negative circle detected. "
+					<< std::format("{} edges left.\n", 
+						(edge_cnt = static_cast<int>(g.edge_cnt)));
+			}
+			// break negative circle finished
+
+			std::cout << "Start executing." << std::endl;
+			ans_matrix d, pi;
+			for (int i = 0; i < ver_cnt; ++i) {
+				d.emplace_back(ver_cnt);
+				pi.emplace_back(ver_cnt);
+			}
+			using milliseconds = std::chrono::duration<double, std::milli>;
+			auto start = std::chrono::steady_clock::now();
+			// start clock
+			Johnson(g, d, pi);
+			// end clock
+			auto finish = std::chrono::steady_clock::now();
+			double duration = milliseconds(finish - start).count();
+			std::cout << "Execution finished. "
+				<< std::format("Time elapsed: {:.4f}ms.", duration);
+			exc_time << std::format("vertex = {}, edge = {}, time = {:.4f}\n",
+				ver_cnt, edge_cnt, duration);
+			display_output(output, d, pi);
+			std::cout << std::format("Result written into {}.\n", output_file);
+			// johnson algorithm execution finished
+
+			std::cout << std::endl;
 		}
 	}
 }
