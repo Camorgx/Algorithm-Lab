@@ -10,3 +10,5 @@ extern void test_Johnson();
 
 // test case Figure 25-2
 extern void cmp_Johnson_Floyed();
+
+extern void test_break_negative_circle();

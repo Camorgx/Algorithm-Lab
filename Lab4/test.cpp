@@ -263,3 +263,20 @@ void cmp_Johnson_Floyed() {
 	test_Johnson(7, 10, from, to, weight);
 	std::cout << std::endl;
 }
+
+void test_break_negative_circle() {
+	unsigned from[] = { 0, 1, 3, 1, 1, 0, 2, 4 };
+	unsigned to[] = { 1, 2, 1, 3, 4, 2, 3, 3 };
+	int weight[] = { -1, 3, 1, 2, 2, 4, -5, -3 };
+	// negative circle: 1 -> 2 -> 3 -> 1
+	graph g(5);
+	for (int i = 0; i < 8; ++i)
+		g.add_edge(from[i], to[i], weight[i]);
+	break_negative_circle(g);
+	for (int u = 0; u < g.vertex_cnt; ++u) {
+		for (auto e = g.edges[u]; e; e = e->next) {
+			std::cout << std::format("{} -> {}, w = {}\n", u, e->vertex, e->weight);
+		}
+	}
+	std::cout << std::endl;
+}
