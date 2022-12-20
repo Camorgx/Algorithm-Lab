@@ -37,12 +37,14 @@ void break_negative_circle(graph& g) {
 
 #include "fib_heap.hpp"
 
-void prepare_for_dij(const graph& g, std::vector<fib_heap<ver_pair>::node*>& nodes) {
+std::vector<fib_heap<ver_pair>::node*> prepare_for_dij(const graph& g) {
+	std::vector<fib_heap<ver_pair>::node*> nodes;
 	nodes.resize(g.vertex_cnt);
 	for (int i = 0; i < g.vertex_cnt; ++i) {
 		nodes[i] = new fib_heap<ver_pair>::node;
 		nodes[i]->val.vertex = i;
 	}
+	return nodes;
 }
 
 void Dijkstra(graph& g, int s, std::vector<fib_heap<ver_pair>::node*>& nodes) {
@@ -65,4 +67,28 @@ void Dijkstra(graph& g, int s, std::vector<fib_heap<ver_pair>::node*>& nodes) {
 			}
 		}
 	}
+}
+
+void Johnson(graph& g, ans_matrix& d, ans_matrix& pi) {
+	int new_ver = static_cast<int>(g.vertex_cnt);
+	g.add_vertex();
+	for (int i = 0; i < new_ver; ++i)
+		g.add_edge(new_ver, i, 0);
+	bellman_ford(g, new_ver);
+	std::vector<int> h(new_ver + 1);
+	for (int i = 0; i <= new_ver; ++i)
+		h[i] = g.vertexes[i].d;
+	for (int i = 0; i <= new_ver; ++i) {
+		for (auto e = g.edges[i]; e; e = e->next)
+			e->weight += h[i] - h[e->vertex];
+	}
+	auto nodes = prepare_for_dij(g);
+	for (int u = 0; u < new_ver; ++u) { // for each vertex
+		Dijkstra(g, u, nodes);
+		for (int v = 0; v < new_ver; ++v) {
+			d[u][v] = g.vertexes[v].d + h[v] - h[u];
+			pi[u][v] = g.vertexes[v].pi;
+		}
+	}
+	for (auto node : nodes) delete node;
 }

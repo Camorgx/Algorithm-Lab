@@ -29,4 +29,10 @@ extern void Dijkstra(graph& g, int s, std::vector<fib_heap<ver_pair>::node*>& no
 
 // allocate space for array that matches vertexes and fib_heap nodes
 // must be called before all the Dijkstras
-extern void prepare_for_dij(const graph& g, std::vector<fib_heap<ver_pair>::node*>& nodes);
+// you should free these space latter
+extern std::vector<fib_heap<ver_pair>::node*> prepare_for_dij(const graph& g);
+
+using ans_matrix = std::vector<std::vector<int>>;
+
+// suppose there is no negative circle
+extern void Johnson(graph& g, ans_matrix& d, ans_matrix& pi);

@@ -1,6 +1,7 @@
 #include "fib_heap.hpp"
 #include "test.hpp"
 
+#include <concepts>
 #include <iostream>
 #include <format>
 
@@ -155,4 +156,110 @@ void test_fib_heap() {
 		{ 5, 5 }, { 7, 6 }, { 9, 7 }, { 3, 8 }, { 1, 9 } };
 	test_fib_heap(tests_int, 5, 0);
 	test_fib_heap(tests_pair, test_pair { 5, 5 }, test_pair { 0, 0 });
+}
+
+#include "Johnson.hpp"
+
+void test_dijkstra() {
+	unsigned from[] = { 1, 2, 2, 1, 3, 1 };
+	unsigned to[] = { 2, 3, 4, 3, 4, 4 };
+	int weight[] = { 2, 2, 1, 5, 3, 4 };
+	graph g(5);
+	for (int i = 0; i < 6; ++i) {
+		g.add_edge(from[i], to[i], weight[i]);
+	}
+	auto nodes = prepare_for_dij(g);
+	Dijkstra(g, 1, nodes);
+	for (int i = 1; i < 5; ++i) {
+		const auto& ver = g.vertexes[i];
+		std::cout << std::format("v = {}, d = {}, pi = {}\n",
+			i, ver.d, ver.pi);
+	}
+	std::cout << std::endl;
+	for (auto node : nodes) delete node;
+}
+
+#include "utils.hpp"
+
+void test_Johnson(int ver_cnt, int edge_cnt, 
+	unsigned from[], unsigned to[], int weight[]) {
+	graph g(ver_cnt);
+	for (int i = 0; i < edge_cnt; ++i) {
+		g.add_edge(from[i], to[i], weight[i]);
+	}
+	ans_matrix d, pi;
+	for (int i = 0; i < ver_cnt; ++i) {
+		d.emplace_back(ver_cnt);
+		pi.emplace_back(ver_cnt);
+	}
+	Johnson(g, d, pi);
+	std::cout << "d:\n";
+	for (int i = 0; i < ver_cnt; ++i) {
+		for (int j = 0; j < ver_cnt; ++j)
+			std::cout << d[i][j] << ' ';
+		std::cout << std::endl;
+	}
+	std::cout << "pi:\n";
+	for (int i = 0; i < ver_cnt; ++i) {
+		for (int j = 0; j < ver_cnt; ++j)
+			std::cout << pi[i][j] << ' ';
+		std::cout << std::endl;
+	}
+	display_output(std::cout, d, pi);
+}
+
+void test_Johnson() {
+	unsigned from[] = { 1, 2, 2, 1, 3, 1 };
+	unsigned to[] = { 2, 3, 4, 3, 4, 4 };
+	int weight[] = { 2, 2, 1, 5, 3, 4 };
+	test_Johnson(5, 6, from, to, weight);
+}
+
+void test_Floyed(int ver_cnt, int edge_cnt,
+	unsigned from[], unsigned to[], int weight[]) {
+	ans_matrix d(ver_cnt, std::vector<int>(ver_cnt, 
+		std::numeric_limits<int>::max() >> 1));
+	ans_matrix pi(ver_cnt, std::vector<int>(ver_cnt, -1));
+	for (int i = 0; i < ver_cnt; ++i)
+		d[i][i] = 0;
+	for (int i = 0; i < edge_cnt; ++i) {
+		d[from[i]][to[i]] = weight[i];
+		pi[from[i]][to[i]] = from[i];
+	}
+	for (int k = 0; k < ver_cnt; ++k) {
+		for (int i = 0; i < ver_cnt; ++i) {
+			for (int j = 0; j < ver_cnt; ++j) {
+				if (d[i][j] > d[i][k] + d[k][j]) {
+					d[i][j] = d[i][k] + d[k][j];
+					pi[i][j] = pi[k][j];
+				}
+			}
+		}
+	}
+	std::cout << "d:\n";
+	for (int i = 0; i < ver_cnt; ++i) {
+		for (int j = 0; j < ver_cnt; ++j)
+			std::cout << d[i][j] << ' ';
+		std::cout << std::endl;
+	}
+	std::cout << "pi:\n";
+	for (int i = 0; i < ver_cnt; ++i) {
+		for (int j = 0; j < ver_cnt; ++j)
+			std::cout << pi[i][j] << ' ';
+		std::cout << std::endl;
+	}
+}
+
+void cmp_Johnson_Floyed() {
+	unsigned from[] = { 1, 2, 2, 3, 3, 4, 4, 5, 6, 6 };
+	unsigned to[] = { 5, 1, 4, 2, 6, 1, 5, 2, 3, 2 };
+	int weight[] = { -1, 1, 2, 2, -8, -4, 3, 7, 10, 5 };
+	
+	std::cout << "Floyed\n\n";
+	test_Floyed(7, 10, from, to, weight);
+	std::cout << std::endl;
+
+	std::cout << "Johnson\n\n";
+	test_Johnson(7, 10, from, to, weight);
+	std::cout << std::endl;
 }

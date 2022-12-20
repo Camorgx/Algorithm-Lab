@@ -137,12 +137,14 @@
     <ClCompile Include="Johnson.cpp" />
     <ClCompile Include="Lab4.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fib_heap.hpp" />
     <ClInclude Include="graph.hpp" />
     <ClInclude Include="Johnson.hpp" />
     <ClInclude Include="test.hpp" />
+    <ClInclude Include="utils.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\input11.txt" />
