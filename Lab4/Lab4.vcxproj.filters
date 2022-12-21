@@ -79,5 +79,32 @@
     <Text Include="input\input42.txt">
       <Filter>资源文件\input</Filter>
     </Text>
+    <Text Include="output\result11.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result12.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result21.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result22.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result31.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result32.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result41.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\result42.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
+    <Text Include="output\time.txt">
+      <Filter>资源文件\output</Filter>
+    </Text>
   </ItemGroup>
 </Project>
