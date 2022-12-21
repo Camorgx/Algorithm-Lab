@@ -12,3 +12,5 @@ extern void test_Johnson();
 extern void cmp_Johnson_Floyed();
 
 extern void test_break_negative_circle();
+
+extern void test_fib_op();

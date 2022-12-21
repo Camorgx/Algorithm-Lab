@@ -18,13 +18,15 @@ int main() {
 			"2. test_dijkstra\n"
 			"3. test_Johnson\n"
 			"4. cmp_Johnson_Floyed\n"
-			"5. test_break_negative_circle\n";
+			"5. test_break_negative_circle\n"
+			"6. test_fib_op\n";
 		std::cin >> choice;
 		if (choice == 1) test_fib_heap();
 		else if (choice == 2) test_dijkstra();
 		else if (choice == 3) test_Johnson();
 		else if (choice == 4) cmp_Johnson_Floyed();
 		else if (choice == 5) test_break_negative_circle();
+		else if (choice == 6) test_fib_op();
 		else std::cout << "Invalid input." << std::endl;
 	}
 	else std::cout << "Invalid input." << std::endl;

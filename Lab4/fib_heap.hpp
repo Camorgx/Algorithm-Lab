@@ -128,7 +128,7 @@ private:
 	}
 
 	// if list == x, this will also modify list itself
-	void remove_circular_list(node* &list, node* x) {
+	void remove_circular_list(node*& list, node* x) {
 		if (list == x)
 			list = (x == x->right) ? nullptr : x->right;
 		x->left->right = x->right;
@@ -145,6 +145,7 @@ private:
 			size_t d = x->degree;
 			while (a[d]) {
 				node* y = a[d];
+				if (x == y) break;
 				if (x->val > y->val) std::swap(x, y);
 				link(y, x);
 				a[d++] = nullptr;

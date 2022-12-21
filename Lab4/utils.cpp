@@ -121,7 +121,7 @@ void run_experiment() {
 			auto finish = std::chrono::steady_clock::now();
 			double duration = milliseconds(finish - start).count();
 			std::cout << "Execution finished. "
-				<< std::format("Time elapsed: {:.4f}ms.", duration);
+				<< std::format("Time elapsed: {:.4f}ms.\n", duration);
 			exc_time << std::format("vertex = {}, edge = {}, time = {:.4f}\n",
 				ver_cnt, edge_cnt, duration);
 			display_output(output, d, pi);

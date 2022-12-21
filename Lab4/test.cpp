@@ -158,6 +158,20 @@ void test_fib_heap() {
 	test_fib_heap(tests_pair, test_pair { 5, 5 }, test_pair { 0, 0 });
 }
 
+void test_fib_op() {
+	int op[] = { 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1, 1, 1, 2 };
+	int ins[] = { 95, 0, 16, 0, 24, 68, 0, 57, 19, 88, 75, 52, 0, 76, 0, 82, 54, 66, 29, 92, 73, 93, 31, 100, 0, 40, 0, 0, 89, 0, 0, 13, 27, 0, 32, 4, 71, 0, };
+	fib_heap<int> heap;
+	std::vector<int> arr = { 20,10,12,9,8,0,3,11,19,5,2,4,15,6,14,1,13,17,17,7,16, };
+	for (int i = 0; i < arr.size(); ++i)
+		heap.insert(arr[i]);
+	for (int i = 0; i < arr.size(); ++i) {
+		auto p = heap.extract_min();
+		display_heap(heap.get_min());
+		delete p;
+	}
+}
+
 #include "Johnson.hpp"
 
 void test_dijkstra() {
