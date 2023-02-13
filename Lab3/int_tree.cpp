@@ -101,7 +101,7 @@ void int_tree::remove(rb_tree::node* z) {
 		y = minimum(z->right);
 		auto p = dynamic_cast<int_tree::node*>(y->parent);
 		y_origin_color = y->color;
-		x = y->left;
+		x = y->right;
 		if (y->parent == z)
 			x->parent = y;
 		else {

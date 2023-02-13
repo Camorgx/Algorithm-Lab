@@ -158,7 +158,7 @@ void rb_tree::remove(node* z) {
 	else {
 		y = minimum(z->right);
 		y_origin_color = y->color;
-		x = y->left;
+		x = y->right;
 		if (y->parent == z)
 			x->parent = y;
 		else {
